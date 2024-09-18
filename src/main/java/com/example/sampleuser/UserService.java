@@ -16,6 +16,7 @@ public class UserService {
     public User updateEmail(int id, String email) {
         User user = userRepository.findById(id);
         user.setEmail(email);
+        userRepository.save(user);
         return user;
     }
 
